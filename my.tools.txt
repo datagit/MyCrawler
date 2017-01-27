@@ -1,0 +1,65 @@
+tools parse data from others website in VN
+  - dom_crawler
+  - add task
+        + config json
+            add site
+            add url
+            is update DB(true)
+            
+        + action check know format
+        + action show data raw
+        + action store data
+            + get data from url
+            + parese format by url
+            + is update
+            + insert to DB
+  - cron job for each taks
+  - create structure in mongoDB
+    + keyword
+		id
+		keyword
+		isEnabled
+		countHit
+		ipUser
+		browserUser
+		deviceUser
+		createdAt
+		updatedAt
+    + product
+		id
+		name
+		description
+		images({1,3})
+		price
+		vendor
+		addressVendor
+		locationVendor(Geo Json)
+		urlVendor
+		isEnabled
+		countHit
+		ipUser
+		browserUser
+		deviceUser
+		createdAt
+		updatedAt
+  - search engine ElasticSearch
+  - teachnical
+		Symfony PHP framework
+		MongoDB
+		ElasticSearch
+		Bootstrap
+  - architecture
+		1. tools crawler get data built by Symfony + MongoDB
+		2. search api built by NodeJs + ElasticSearch
+		3. frontend website built by Symfony + ReactJs + Bootstrap + SEO
+		4. mobile app native Android and Ios built by React Native
+		5. PR product
+ - website
+       + home page
+            input search
+            random list product
+       + search result page
+       + detail page
+           chart
+           goto original
+           similar product by name, location, price
