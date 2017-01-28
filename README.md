@@ -11,11 +11,11 @@ list product support
     - name or model
     - manual admin input detail about product => DB(auto)
     product {
-        name: "abc",
+        name: "unique abc",
         model: "unique for each model",
         type: "product type for format",
-        category: ["abc", "def"],
-        detail: {
+        tags: ["abc", "def"],
+        fields: {
             field1: "aaa",
             ...
         }
@@ -23,11 +23,10 @@ list product support
             name: "n1",
             logo: "l1",
             price: 120,
-            url: "http://dfsdfds",
+            detailUrl: "http://dfsdfds",
             address: "",
             area: "hcm,hn,...",
-            phone: "",
-            isVerified: false,
+            phone: ""
         }
     }
     -search some site buy it and element auto for each site
